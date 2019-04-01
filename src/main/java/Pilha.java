@@ -1,18 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pilha {
 
-	public Integer getTamanho() {
-		return 0;
+	private List<Integer> pilha;
+	
+	public Pilha() {
+		this.pilha = new ArrayList<Integer>();
 	}
 	
-	public void entrarNaPilha(Integer elemento) {
-		
+	public Integer getTamanho() {
+		return this.pilha.size();
+	}
+	
+	public void entrarNaPilha(Integer elemento) {		
+		this.pilha.add(elemento);
 	}
 
 	public Integer sairDaPilha() {
-		return 0;		
+		return this.pilha.remove(this.pilha.size() - 1);
 	}
 	
 	public Integer getTopo() {
-		return 0;		
+		return this.pilha.get(this.pilha.size() - 1);		
 	}
 }
